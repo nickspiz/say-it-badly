@@ -6,7 +6,7 @@
 ![Works with Claude Code](https://img.shields.io/badge/works%20with-Claude%20Code-d97757)
 ![Speech-to-text](https://img.shields.io/badge/input-any%20speech--to--text-blue)
 
-Talking to a coding agent is faster than typing. It also means every request arrives with the mistakes of a speech recognizer: wrong names, glued words, a missing "not". Agents tend to react in one of two ways. They quote the mistake back and ask what you meant, or they take it literally and do the wrong thing.
+Talking to a coding agent is faster than typing, but every request arrives with the mistakes of a speech recognizer: wrong names, glued words, a missing "not". Agents usually react in one of two ways. They quote the mistake back and ask what you meant, or they take it literally and do the wrong thing.
 
 This is a drop-in rule file that fixes both. Fix the meaning first, ask only when a wrong guess would cost real money or real data.
 
@@ -24,27 +24,27 @@ With the rule:
 >
 > Committed. Version bumped to 1.4.0. Not pushed.
 
-One line of interpretation, then the work. No quiz.
+The agent states its reading in one line and gets to work.
 
 ## What it fixes
 
-- **Names.** "pine cone" becomes `pinecone`. The agent matches by sound against your project list and your glossary.
-- **Numbers.** "one point four oh" becomes `1.4.0`.
-- **Glued and split words.** "get hub" is GitHub, "dev ops" and "devops" are the same word.
-- **Punctuation.** Dictation puts commas anywhere. Two requests can fuse into one sentence, and one can split in two. The agent reads for intent, not for periods.
-- **Fragments.** The start of a sentence got eaten, or a stray word hangs at the end. The agent works with what's there.
-- **Negations.** Handled carefully. See below, because this is where it gets dangerous.
+- Names: "pine cone" becomes `pinecone`. The agent matches by sound against your project list and your glossary.
+- Numbers: "one point four oh" becomes `1.4.0`.
+- Glued and split words: "get hub" is GitHub, and "dev ops" and "devops" are the same word.
+- Punctuation: dictation puts commas anywhere. Two requests can fuse into one sentence, and one can split in two. The agent reads for intent, not for periods.
+- Fragments: the start of a sentence got eaten, or a stray word hangs at the end. The agent works with what's there.
+- Negations: handled carefully, because a wrong guess here does the most damage. See the next section.
 
 ## When it must still ask
 
-Fixing typos silently is fine. Guessing on something expensive is not. The agent stops and asks one short question, with options, when:
+Fixing typos silently is fine, but guessing on something expensive is not. The agent stops and asks one short question, with options, when the request involves:
 
-- **Money.** Amounts, plans, paid API calls. "Fifteen" and "fifty" sound alike.
-- **Production.** Deploys, migrations, restarts of live services.
-- **Deletion.** Files, branches, tables, accounts.
-- **Sending outside.** Email, messages, public posts, anything a stranger will read.
-- **A negation it can't resolve.** "Push" and "don't push" differ by one syllable and have opposite results.
-- **Two equally likely readings.** Two projects that sound alike, two accounts, two domains.
+- money: amounts, plans, paid API calls ("fifteen" and "fifty" sound alike)
+- production: deploys, migrations, restarts of live services
+- deletion: files, branches, tables, accounts
+- sending anything outside: email, messages, public posts, anything a stranger will read
+- a negation it can't resolve: "push" and "don't push" differ by one syllable and have opposite results
+- two equally likely readings: two projects that sound alike, two accounts, two domains
 
 Before using a spoken value in an irreversible step (a domain, an amount, an email address, an ID), the agent checks it against the source of truth: the config, the dashboard, the database. It doesn't trust what the microphone heard.
 

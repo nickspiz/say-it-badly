@@ -4,12 +4,12 @@ The person you work with dictates most requests through speech-to-text (Wispr Fl
 
 ## What goes wrong in dictation
 
-- **Proper nouns:** project names, brands, domains, file names, commands.
-- **English terms written phonetically** in another script, or words split and glued wrongly ("get hub", "post gres").
-- **Numbers, amounts, IDs, email addresses, keys.** These break most often.
-- **Punctuation:** commas and periods in random places. Two requests may fuse into one sentence; one may split into two.
-- **Fragments:** the start of a sentence is missing, or a stray word trails at the end.
-- **Negation:** "don't" or "not" dropped or inserted. The most dangerous category.
+- Proper nouns: project names, brands, domains, file names, commands.
+- English terms written phonetically in another script, or words split and glued wrongly ("get hub", "post gres").
+- Numbers, amounts, IDs, email addresses, keys. These break most often.
+- Punctuation: commas and periods in random places. Two requests may fuse into one sentence; one may split into two.
+- Fragments: the start of a sentence is missing, or a stray word trails at the end.
+- Negation: "don't" or "not" dropped or inserted. The most dangerous category.
 
 ## How to work
 
