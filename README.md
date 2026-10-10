@@ -2,6 +2,8 @@
 
 **You dictated it wrong. Your agent should understand anyway.**
 
+![A dictated request, read wrongly without the rule and correctly with it](docs/demo.gif)
+
 ![License: MIT](https://img.shields.io/badge/license-MIT-green)
 ![Works with Claude Code](https://img.shields.io/badge/works%20with-Claude%20Code-d97757)
 ![Speech-to-text](https://img.shields.io/badge/input-any%20speech--to--text-blue)
@@ -66,15 +68,24 @@ Then reference it from your `CLAUDE.md` or `AGENTS.md`:
 Requests are dictated by voice. Follow rules/voice-input.md.
 ```
 
+As a Claude Code plugin, the rule ships as a skill:
+
+```text
+/plugin install say-it-badly --marketplace nickspiz/say-it-badly
+```
+
 Or paste the contents of the rule straight into the file. Optionally copy `templates/glossary.md` and fill in your own project names so the agent stops guessing.
 
 ## What's inside
 
 ```
-rules/voice-input.md     the drop-in rule
-templates/glossary.md    example glossary with made-up names
+rules/voice-input.md            the drop-in rule
+skills/voice-input/SKILL.md     the same rule as a plugin skill
+templates/glossary.md           example glossary with made-up names
 ```
 
 ## License
 
 MIT. See [LICENSE](LICENSE).
+
+If this helped, a star helps others find it.

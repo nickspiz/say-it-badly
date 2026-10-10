@@ -1,0 +1,12 @@
+{
+  "name": "say-it-badly",
+  "description": "Voice-input rule for Claude Code",
+  "owner": { "name": "Nikita Spitsyn", "url": "https://github.com/nickspiz" },
+  "plugins": [
+    {
+      "name": "say-it-badly",
+      "source": "./",
+      "description": "Understands dictated requests: fixes names, numbers and punctuation silently, asks only about money, production, deletion and unclear negations."
+    }
+  ]
+}

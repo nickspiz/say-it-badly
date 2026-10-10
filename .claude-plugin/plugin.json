@@ -1,0 +1,10 @@
+{
+  "name": "say-it-badly",
+  "version": "0.1.0",
+  "description": "A rule for coding agents that fixes dictation mistakes silently and asks only when a wrong guess costs money or data.",
+  "author": { "name": "Nikita Spitsyn", "url": "https://github.com/nickspiz" },
+  "homepage": "https://github.com/nickspiz/say-it-badly",
+  "repository": "https://github.com/nickspiz/say-it-badly",
+  "license": "MIT",
+  "keywords": ["voice", "dictation", "speech-to-text", "rules"]
+}
