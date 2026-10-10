@@ -84,6 +84,10 @@ skills/voice-input/SKILL.md     the same rule as a plugin skill
 templates/glossary.md           example glossary with made-up names
 ```
 
+## Questions and ideas
+
+Have a question or an idea? Start a [discussion](https://github.com/nickspiz/say-it-badly/discussions). For bugs, open an [issue](https://github.com/nickspiz/say-it-badly/issues/new/choose). See [CONTRIBUTING.md](CONTRIBUTING.md) before sending a pull request.
+
 ## License
 
 MIT. See [LICENSE](LICENSE).
