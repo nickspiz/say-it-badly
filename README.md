@@ -2,7 +2,7 @@
 
 **You dictated it wrong. Your agent should understand anyway.**
 
-![A dictated request, read wrongly without the rule and correctly with it](docs/demo.gif)
+![The same dictated request, answered without and with the rule](docs/demo.gif)
 
 ![License: MIT](https://img.shields.io/badge/license-MIT-green)
 ![Works with Claude Code](https://img.shields.io/badge/works%20with-Claude%20Code-d97757)
@@ -68,7 +68,7 @@ Then reference it from your `CLAUDE.md` or `AGENTS.md`:
 Requests are dictated by voice. Follow rules/voice-input.md.
 ```
 
-As a Claude Code plugin, the rule ships as a skill:
+You can also install it as a Claude Code plugin, where the rule is a skill:
 
 ```text
 /plugin install say-it-badly --marketplace nickspiz/say-it-badly
