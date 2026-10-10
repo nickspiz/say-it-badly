@@ -71,10 +71,17 @@ Requests are dictated by voice. Follow rules/voice-input.md.
 You can also install it as a Claude Code plugin, where the rule is a skill:
 
 ```text
-/plugin install say-it-badly --marketplace nickspiz/say-it-badly
+/plugin marketplace add nickspiz/say-it-badly
+/plugin install say-it-badly@say-it-badly
 ```
 
 Or paste the contents of the rule straight into the file. Optionally copy `templates/glossary.md` and fill in your own project names so the agent stops guessing.
+
+## Example prompts
+
+- "deploy the pine cone shop fix no wait dont push just commit it"
+- "bump the version to one point four oh"
+- "delete the old branch, not the main one"
 
 ## What's inside
 
@@ -88,8 +95,14 @@ templates/glossary.md           example glossary with made-up names
 
 Have a question or an idea? Start a [discussion](https://github.com/nickspiz/say-it-badly/discussions). For bugs, open an [issue](https://github.com/nickspiz/say-it-badly/issues/new/choose). See [CONTRIBUTING.md](CONTRIBUTING.md) before sending a pull request.
 
+## Privacy
+
+The plugin is one skill, a plain text rule about reading dictated requests. It has no scripts and no hooks. The plugin itself reads no files, calls nothing and makes no network requests. It writes nothing and sends nothing to the author. It only changes how Claude interprets what you type. Whatever Claude does afterwards happens through the tools and permissions you already have in your session, as it would without this plugin.
+
+## Support
+
+Questions or bugs: [GitHub Issues](https://github.com/nickspiz/say-it-badly/issues) or hello@nickspiz.com.
+
 ## License
 
 MIT. See [LICENSE](LICENSE).
-
-If this helped, a star helps others find it.
