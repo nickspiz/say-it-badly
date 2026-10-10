@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for looking at say-it-badly. It is a drop-in rule file for agents that take dictated requests. Small, focused fixes are the most useful.
+This repo is a drop-in rule file for agents that take dictated requests. Small, focused fixes are welcome.
 
 ## Before you start
 
